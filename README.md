@@ -1,3 +1,31 @@
-This Github repo is to go along with the WeintekUSA tutorial to connect a PostgreSQL database to a WeintekUSA Easybuilder PRO project. These are the file need to make the connections. Included is the java_api_request.js file which is needed within the JS resource object to make requests. The Index.js file which is the Node API set up file need to make the ends to grab data from the PostGreSQL database. eb_pro_postgres_api_recipe.js and the esb_code_api_requests_stactic.js which is the code to set up the JS object within easybuilder to gather data from the Node JS endpoints and transfer the data to the apporiate recipe database or ascii objects. 
+WeintekUSA PostgreSQL Integration for EasyBuilder Pro
+
+Overview
+
+This repository accompanies the WeintekUSA tutorial on integrating a PostgreSQL database with an EasyBuilder Pro project using a Node.js API. The included files facilitate seamless data retrieval and communication between the database and EasyBuilder Pro, ensuring efficient data transfer and synchronization.
+
+Repository Contents
+
+API & Backend
+
+index.js – The primary Node.js API setup file. This script defines the endpoints required to interact with the PostgreSQL database, enabling data retrieval and transfer.
+
+java_api_request.js – A JavaScript resource used within the JS Object in EasyBuilder Pro to make HTTP requests to the Node.js API.
+
+EasyBuilder Pro Integration
+
+eb_pro_postgres_api_recipe.js – JavaScript code to configure the JS Object in EasyBuilder Pro for handling data exchanges with the Node.js API. It ensures that the retrieved data is processed and assigned correctly within EasyBuilder Pro.
+
+esb_code_api_requests_static.js – A static JavaScript file designed to set up and manage API requests within EasyBuilder Pro. This file facilitates data transfer to appropriate recipe databases and ASCII objects within the project.
+
+Installation & Usage
+
+Prerequisites
+
+Node.js installed on your system
+
+PostgreSQL database setup with the required schema
+
+EasyBuilder Pro software installed
 ![image](https://github.com/user-attachments/assets/a0ac893c-fedb-4fd8-b11c-49332ee42e9b)
 
