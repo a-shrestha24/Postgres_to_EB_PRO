@@ -1,1 +1,3 @@
+This Github repo is to go along with the WeintekUSA tutorial to connect a PostgreSQL database to a WeintekUSA Easybuilder PRO project. These are the file need to make the connections. Included is the java_api_request.js file which is needed within the JS resource object to make requests. The Index.js file which is the Node API set up file need to make the ends to grab data from the PostGreSQL database. eb_pro_postgres_api_recipe.js and the esb_code_api_requests_stactic.js which is the code to set up the JS object within easybuilder to gather data from the Node JS endpoints and transfer the data to the apporiate recipe database or ascii objects. 
+![image](https://github.com/user-attachments/assets/a0ac893c-fedb-4fd8-b11c-49332ee42e9b)
 
