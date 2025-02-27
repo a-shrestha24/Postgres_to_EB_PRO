@@ -7,7 +7,7 @@ var mouseArea = new MouseArea(); // Mouse area to activate JS object on click
 this.widget.add(mouseArea);      // Adding the mouseArea object to the JS object
 
 // Set the new host IP address
-const API_HOST = 'http://192.168.4.37:3000';  // New host address
+const API_HOST = 'INSERT IN IP ADDRSS OR LOCAL HOST';  // New host address
 
 // on click the mouseArea object will run the following commands
 mouseArea.on('click', async (mouseEvent) => {
