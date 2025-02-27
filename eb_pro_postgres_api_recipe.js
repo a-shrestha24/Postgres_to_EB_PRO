@@ -1,85 +1,69 @@
-const request = require('/java_api_requests.js'); // need to make js request. Files are installed within JS object resources
+const request = require('/java_api_requests.js'); // JS request module for EB Pro
 
-var self = this; // constructor to access objects set up in the Objects tab
-var count = 0;   // count of how many indexes pulled from database
+var self = this; // Access objects set up in the Objects tab
+var count = 0;   // Number of indexes pulled from the database
 
-var mouseArea = new MouseArea(); //Mouse area set up so when clicked on JS object will activate
+var mouseArea = new MouseArea(); // Mouse area to activate JS object on click
 this.widget.add(mouseArea);      // Adding the mouseArea object to the JS object
+
+// Set the new host IP address
+const API_HOST = 'http://192.168.4.37:3000';  // New host address
 
 // on click the mouseArea object will run the following commands
 mouseArea.on('click', async (mouseEvent) => {
     try {
-
-        // Clear the existing table. 
-        // In the recipe index the 4 command will clear the recipe database and delete all existing data
+        // Clear the existing table
         var clean_cmd = 4;
-        driver.setData(self.config.COMMAND, clean_cmd); // Command of 4 is sent to the recipe database object
-
-        // Get the count of table, and data from the table
+        driver.setData(self.config.COMMAND, clean_cmd);
         console.log("Fetching data from API...");
-        await get_count(); // function is called to fetech the number of indexes from the database. 
-        await get_data();  // function is called to fetech the data from the database
 
+        // Fetch count and data from the API
+        await get_count(); 
+        await get_data();  
 
     } catch (err) {
-        // If error is made the message will be printed
         console.log('Error retrieving data (mouseArea):', err.message);
     }
 });
 
-
-// Data is retrived from the API at the data end point
+// Data is retrieved from the API at the /data endpoint
 async function get_data() {
     try {
-
-        // data is requested at the data endpoint
         request.get({
-           url: 'http://10.1.10.122:3000/data',
-        }, updateFields); // callback function is called after retriving the data from the end point. 
-
+           url: `${API_HOST}/data`, // New host address for data endpoint
+        }, updateFields); 
     } catch (err) {
-
-        // Errors will be printed if found. 
         console.log('Error fetching data(Get Data):', err.message);
     }
 }
 
-// Number of indexes is retrived from the count endpoint. 
-async function get_count(){
+// Number of indexes is retrieved from the /count endpoint
+async function get_count() {
     try {
         request.get({
-            // request to the count end point
-           url: 'http://10.1.10.122:3000/count',
-        }, updateCount); // call back function to update the count variable which is a global variable. 
+           url: `${API_HOST}/count`, // New host address for count endpoint
+        }, updateCount);
     } catch (err) {
-
-        // Error are printed if found
-        console.log('Error fetching data(Get Data):', err.message);
+        console.log('Error fetching data(Get Count):', err.message);
     }
 }
 
-// call back function to update the count 
-function updateCount(error, response, body){
+// Callback function to update the count
+function updateCount(error, response, body) {
     try {
-        const data = JSON.parse(body);  // grabing the data from the API pull
-
-        // error catcher if no data is recived. 
+        const data = JSON.parse(body);
         if (data.length === 0) {
-            console.log("Count not recived.");
+            console.log("Count not received.");
             return;
         }
-      
-        count = data[0].count; // setting the count with the value from the database query. 
-
-
-        
+        count = Number(data[0].count); 
+        console.log(`Count received: ${count}`);
     } catch (error) {
-
-        // errors printed if found. 
-        console.log('Error:', err.message);
+        console.log('Error:', error.message);
     }
 }
 
+// Callback function to place the values from the database into the recipe database
 // call back function to place the values from the database into the recipe database
 function updateFields(error, response, body) {
     try {
@@ -126,10 +110,7 @@ function updateFields(error, response, body) {
         console.log("Error processing API response (updateFields):", error.message);
     }
 }
-
-// placedholder function for the timeout. 
+// Placeholder function for the timeout
 function wait() {
-    console.log("waiting")
+    console.log("waiting");
 }
-
-
