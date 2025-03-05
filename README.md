@@ -16,11 +16,25 @@ This repository accompanies the WeintekUSA tutorial on integrating a PostgreSQL 
 
 ## Prerequisites
 
+## Prerequisites
+
 Before getting started, ensure you have the following installed and set up:
 
 - **[Node.js](https://nodejs.org/en)** – Required to run the API.
 - **[PostgreSQL](https://www.postgresql.org/download/)** – Ensure your database is installed and configured with the necessary schema.
 - **[EasyBuilder Pro](https://www.weintek.com/globalw/Download/Download.aspx)** – Needed for project development and integration.
+
+## Setting Up the Node.js Environment
+
+To initialize a new Node.js project, run:
+
+```sh
+npm init -y
+npm install express
+npm install cors
+npm install dotenv
+```
+
 
 
 
