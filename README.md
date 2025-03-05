@@ -1,4 +1,4 @@
-##**WeintekUSA PostgreSQL Integration for EasyBuilder Pro**
+## **WeintekUSA PostgreSQL Integration for EasyBuilder Pro**
 ![image](https://github.com/user-attachments/assets/a0ac893c-fedb-4fd8-b11c-49332ee42e9b)
 
 ## **Overview**
