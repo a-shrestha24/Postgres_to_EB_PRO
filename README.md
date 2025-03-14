@@ -1,5 +1,6 @@
 ## **WeintekUSA PostgreSQL Integration for EasyBuilder Pro**
-![image](https://github.com/user-attachments/assets/a0ac893c-fedb-4fd8-b11c-49332ee42e9b)
+![image](https://github.com/user-attachments/assets/a0ac893c-fedb-4fd8-b11c-49332ee42e9b
+
 
 ## **Overview**
 This repository accompanies the WeintekUSA tutorial on integrating a PostgreSQL database with an EasyBuilder Pro project using a Node.js API. The included files facilitate seamless data retrieval and communication between the database and EasyBuilder Pro, ensuring efficient data transfer and synchronization.
@@ -15,7 +16,6 @@ This repository accompanies the WeintekUSA tutorial on integrating a PostgreSQL 
 - **`esb_code_api_requests_static.js`** – JavaScript code to configure the JS Object in EasyBuilder Pro for handling data exchanges with the Node.js API. It ensures that the retrieved data is processed and assigned to an **ASCII** object.
 
 ## Prerequisites
-![video]https://www.youtube.com/watch?v=ltBUq_DREG0&t=11s
 
 Before getting started, ensure you have the following installed and set up:
 
@@ -24,6 +24,7 @@ Before getting started, ensure you have the following installed and set up:
 - **[EasyBuilder Pro](https://www.weintek.com/globalw/Download/Download.aspx)** – Needed for project development and integration
 ## Youtube Video
 
+*[How to connect a Weintek HMI to a PostgreSQL database](https://www.youtube.com/watch?v=ltBUq_DREG0&t=11s)*.
 ## Setting Up the Node.js Environment
 
 To initialize a new Node.js project, run:
