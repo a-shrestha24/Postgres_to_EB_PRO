@@ -15,14 +15,14 @@ This repository accompanies the WeintekUSA tutorial on integrating a PostgreSQL 
 - **`esb_code_api_requests_static.js`** – JavaScript code to configure the JS Object in EasyBuilder Pro for handling data exchanges with the Node.js API. It ensures that the retrieved data is processed and assigned to an **ASCII** object.
 
 ## Prerequisites
-
-## Prerequisites
+![video]https://www.youtube.com/watch?v=ltBUq_DREG0&t=11s
 
 Before getting started, ensure you have the following installed and set up:
 
 - **[Node.js](https://nodejs.org/en)** – Required to run the API.
 - **[PostgreSQL](https://www.postgresql.org/download/)** – Ensure your database is installed and configured with the necessary schema.
-- **[EasyBuilder Pro](https://www.weintek.com/globalw/Download/Download.aspx)** – Needed for project development and integration.
+- **[EasyBuilder Pro](https://www.weintek.com/globalw/Download/Download.aspx)** – Needed for project development and integration
+## Youtube Video
 
 ## Setting Up the Node.js Environment
 
